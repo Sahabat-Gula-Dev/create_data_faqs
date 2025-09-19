@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Data FAQ - Sahabat Gula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card-header">
+          <div class="header-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div>
+            <h1 class="card-title">Formulir Input FAQ</h1>
+            <p class="card-subtitle">
+              Menambahkan data Frequently Asked Questions.
+            </p>
+          </div>
+        </div>
+        <form id="faqForm" class="card-body">
+          <div class="form-group span-2">
+            <label for="question">Pertanyaan</label>
+            <textarea
+              id="question"
+              name="question"
+              placeholder="Tuliskan pertanyaan di sini..."
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group span-2">
+            <label for="answer">Jawaban</label>
+            <textarea
+              id="answer"
+              name="answer"
+              placeholder="Tuliskan jawaban dari pertanyaan di atas..."
+              rows="6"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="category_id">Kategori FAQ</label>
+            <div class="select-wrapper">
+              <select id="category_id" name="category_id">
+                <option value="">Pilih Kategori...</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="category_name">Atau Buat Kategori Baru</label>
+            <input
+              type="text"
+              id="category_name"
+              name="category_name"
+              placeholder="cth: Umum, Akun"
+            />
+          </div>
+
+          <div class="form-footer span-2">
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span class="spinner"></span>
+              <span class="btn-text">Simpan FAQ</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
